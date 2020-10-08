@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+tinydb-baseclass = "*"
+click = "*"
+gtts = "*"
+pypdf2 = "*"
+pdf2docx = "*"
+
+[requires]
+python_version = "3.7"
