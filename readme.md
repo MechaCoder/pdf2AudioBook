@@ -1,5 +1,5 @@
 # pdf 2 AudioBook
-this is a simple program that allows a user to turn `pdf` into mp3,
+this is a simple program that allows a user to turn `pdf` into mp3
 useing tts tools.
 
 ## needed to run
