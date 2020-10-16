@@ -19,7 +19,12 @@ def convert(pdf):
 def convert2filesPageByPage(pdf):
     """ convert a pdf into a set of files (mp3), one file per page """
     click.secho(f'converting {pdf}', fg='yellow')
-    s = convertsToSiris(pdf)
+    file_extention = pdf.split('.')[-1]
+
+    if file_extention is 'pdf':
+        s = convertsToSiris(pdf)
+    if file_extention is 'epub':
+        convertsToSirisEpub(pdf)
 
 
 

@@ -1,6 +1,7 @@
 from click import secho, progressbar
 
 from .pdf.pdf import PDF
+from .pdf.epub import Epub
 from .sound.content import normalise
 from .sound.mp3 import convertStringToMp3
 
@@ -24,4 +25,25 @@ def convertsToSiris(path:str):
                 convertStringToMp3(page, f'{p.getsDocTitle()}-{pageInt}')
             )
             pageInt += 1
+    return files
+
+def convertsToSirisEpub(path:str):
+    epub = Epub(path)
+    files = []
+    secho('converting content', fg='yellow')
+    content = epub.getText()
+    title = epub.getsDocTitle()
+    with progressbar(content) as bar:
+        for chapter in bar:
+            chapterTitle = chapter['title']
+            if str.isspace(chapter['content']):
+                continue
+            files.append(
+                convertStringToMp3(
+                    chapter['content'],
+                    f'{title}--{chapterTitle}'
+                )
+            )
+
+
     return files

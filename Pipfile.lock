@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "132870a653b49699e6b7b43ce215dbe84cfa4b1fe3561baf7e08ca14fa1c4400"
+            "sha256": "694774e1dbf72430b7d097b6661847c01143a1649d7443e9fd9465d23f84142a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -113,6 +113,13 @@
                 "sha256:f99317a0fa2e49917689b8cf977510addcfaaab769b3f899b9c481bbd76730c2"
             ],
             "version": "==3.1.1"
+        },
+        "ebooklib": {
+            "hashes": [
+                "sha256:fe23e22c28050196c68db3e7b13b257bf39426d927cb395c6f2cc13ac11327f1"
+            ],
+            "index": "pypi",
+            "version": "==0.17.1"
         },
         "fire": {
             "hashes": [
@@ -281,11 +288,11 @@
         },
         "tinydb-baseclass": {
             "hashes": [
-                "sha256:5923d13b839ebb3c72599c9532448088aaba4a03720c0cf69498d4dea890542c",
-                "sha256:6beaf9326df629c0359f13b4dc9b57cb79e2bb6215114b81ab8ca086d78ee06a"
+                "sha256:3b888c825521fac326b37fff37801f9c40e0a2ae5cd45076714107bdbfdcf9b4",
+                "sha256:e55c5d481ec99d87dcc213b5404356f4152209be3d83eada86725d065856941d"
             ],
             "index": "pypi",
-            "version": "==0.2.0"
+            "version": "==0.3.0"
         },
         "urllib3": {
             "hashes": [

@@ -11,6 +11,7 @@ click = "*"
 gtts = "*"
 pypdf2 = "*"
 pdf2docx = "*"
+ebooklib = "*"
 
 [requires]
 python_version = "3.7"
