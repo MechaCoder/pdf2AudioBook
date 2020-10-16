@@ -21,11 +21,15 @@ def convert2filesPageByPage(pdf):
     click.secho(f'converting {pdf}', fg='yellow')
     file_extention = pdf.split('.')[-1]
 
-    if file_extention is 'pdf':
+    click.secho(f'detecting file exetetion ({file_extention})', fg='yellow')
+    if file_extention == 'pdf':
         convertsToSiris(pdf)
-    if file_extention is 'epub':
+        return True
+    if file_extention == 'epub':
         convertsToSirisEpub(pdf)
-
+        return True
+    
+    click.secho('You need to use .pdf or .epub')
 
 
 if __name__ == '__main__':
