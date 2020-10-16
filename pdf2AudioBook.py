@@ -1,7 +1,7 @@
 import click
 
 from pdf2AudioBook import convert as convertToMp3
-from pdf2AudioBook import convertsToSiris
+from pdf2AudioBook import convertsToSiris, convertsToSirisEpub
 
 @click.group()
 def cli():
@@ -12,7 +12,7 @@ def cli():
 def convert(pdf):
     """ converts pdf file to mp3 """
     click.secho(f'converting {pdf}', fg='yellow')
-    s = convertToMp3(pdf)
+    convertToMp3(pdf)
 
 @cli.command()
 @click.argument('pdf', type=click.Path(exists=True))
@@ -22,7 +22,7 @@ def convert2filesPageByPage(pdf):
     file_extention = pdf.split('.')[-1]
 
     if file_extention is 'pdf':
-        s = convertsToSiris(pdf)
+        convertsToSiris(pdf)
     if file_extention is 'epub':
         convertsToSirisEpub(pdf)
 
